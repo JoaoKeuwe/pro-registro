@@ -56,7 +56,7 @@ const Sidebar: React.FC = () => {
   return (
     <div
       className={cn(
-        "h-full min-h-screen border-r border-border flex flex-col bg-background py-6 sidebar-transition",
+        "sticky top-0 h-screen overflow-y-auto border-r border-border flex flex-col bg-background py-6 sidebar-transition",
         collapsed ? "w-[70px]" : "w-[250px]"
       )}
     >
