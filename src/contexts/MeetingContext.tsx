@@ -24,6 +24,7 @@ export interface Meeting {
   participants: Participant[];
 }
 
+
 interface MeetingContextProps {
   meetings: Meeting[];
   filteredMeetings: Meeting[];
@@ -195,3 +196,5 @@ export const MeetingProvider: React.FC<{ children: React.ReactNode }> = ({ child
 };
 
 export const useMeetings = () => useContext(MeetingContext);
+
+export default MeetingContext
