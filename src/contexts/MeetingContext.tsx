@@ -38,7 +38,7 @@ interface MeetingContextProps {
 const sampleParticipants: Participant[] = [
   {
     id: "1",
-    name: "Daniel Cascata",
+    name: "João Keuwe",
     avatar: "https://randomuser.me/api/portraits/women/56.jpg",
   },
   {

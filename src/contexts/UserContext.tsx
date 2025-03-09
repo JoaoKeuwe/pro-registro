@@ -16,8 +16,8 @@ interface UserContextProps {
 
 const defaultUser: User = {
   id: '1',
-  name: 'Daniel Cascata',
-  organization: 'Prefeitura de Florianópolis',
+  name: 'João Keuwe',
+  organization: 'Prefeitura de são paulo',
   avatar: '/9e31bb3a-b0d9-4f1b-93f3-734ef9db6ebf.png',
 };
 

@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { cn } from "@/lib/utils";
@@ -57,7 +56,7 @@ const Sidebar: React.FC = () => {
   return (
     <div
       className={cn(
-        "h-full min-h-screen border-r border-border flex flex-col bg-background py-6 sidebar-transition fixed",
+        "h-full min-h-screen border-r border-border flex flex-col bg-background py-6 sidebar-transition",
         collapsed ? "w-[70px]" : "w-[250px]"
       )}
     >
@@ -83,10 +82,7 @@ const Sidebar: React.FC = () => {
             className="w-full justify-center"
           />
         ) : (
-          <CreateMeetingButton
-            variant="outline"
-            className="w-full py-5"
-          />
+          <CreateMeetingButton variant="outline" className="w-full py-5" />
         )}
       </div>
 
@@ -127,7 +123,7 @@ const Sidebar: React.FC = () => {
       </div>
 
       <div className="mt-4 px-4 pt-4 border-t border-border">
-        <div className="flex items-center">
+        <div className={cn("flex", collapsed ? "flex-col items-center gap-4" : "items-center")}>
           <Avatar className="h-9 w-9">
             <AvatarImage src={user.avatar} alt={user.name} />
             <AvatarFallback>{user.name.charAt(0)}</AvatarFallback>
@@ -140,12 +136,16 @@ const Sidebar: React.FC = () => {
               </p>
             </div>
           )}
-          <div className={cn("flex items-center", collapsed ? "ml-auto" : "ml-auto")}>
+          <div
+            className={cn(
+              collapsed ? "flex flex-col items-center gap-4" : "flex items-center ml-auto"
+            )}
+          >
             <ThemeToggle className={collapsed ? "h-8 w-8" : ""} />
             <Button
               variant="ghost"
               size="icon"
-              className="ml-1 h-8 w-8"
+              className="h-8 w-8"
               onClick={() => setCollapsed(!collapsed)}
             >
               {collapsed ? (
